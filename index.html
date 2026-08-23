@@ -150,9 +150,8 @@
         }
 
         .logo-icon {
-            width: 42px;
             height: 42px;
-            fill: var(--primary);
+            width: auto;
         }
 
         .logo-text {
@@ -1258,25 +1257,28 @@
     <header id="header">
         <div class="nav-container">
             <a href="#" class="logo-box" aria-label="Volver al inicio">
-                <!-- SVG Icon Logo - Instituto Leibnitz -->
-                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <mask id="header-globe-mask">
-                            <!-- Todo lo blanco es visible -->
-                            <circle cx="50" cy="50" r="15" fill="#ffffff" />
-                            <!-- Las líneas negras cortan el círculo -->
-                            <rect x="30" y="41" width="40" height="3" fill="#000000" />
-                            <rect x="30" y="49" width="40" height="3" fill="#000000" />
-                            <rect x="30" y="57" width="40" height="3" fill="#000000" />
-                        </mask>
-                    </defs>
-                    <!-- Símbolo de corchetes girado (L y L opuestas) -->
-                    <g transform="rotate(45 50 50)" fill="currentColor">
-                        <path d="M 36,20 L 80,20 L 80,64 L 68,64 L 68,32 L 36,32 Z" />
-                        <path d="M 20,36 L 20,80 L 64,80 L 64,68 L 32,68 L 32,36 Z" />
-                    </g>
-                    <!-- Globo central con máscara de franjas -->
-                    <circle cx="50" cy="50" r="15" fill="currentColor" mask="url(#header-globe-mask)" />
+                <!-- SVG Icon Logo - Cultura LBZ -->
+                <svg class="logo-icon" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg" style="height: 42px; width: auto;">
+                    <!-- Text: Cultura -->
+                    <text x="5" y="32" 
+                          font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+                          font-size="32" 
+                          font-weight="600" 
+                          font-style="italic" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          stroke-width="2.2"
+                          letter-spacing="0.5">Cultura</text>
+                    <!-- Text: LBZ -->
+                    <text x="5" y="78" 
+                          font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+                          font-size="52" 
+                          font-weight="900" 
+                          font-style="italic" 
+                          fill="none" 
+                          stroke="var(--accent)" 
+                          stroke-width="3"
+                          letter-spacing="1">LBZ</text>
                 </svg>
                 <div class="logo-text">
                     <span class="logo-title">Instituto Leibnitz</span>
@@ -1768,25 +1770,28 @@
                 
                 <div class="footer-logo">
                     <div class="logo-box">
-                        <!-- SVG White Icon Logo -->
-                        <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="fill: var(--text-light);">
-                            <defs>
-                                <mask id="footer-globe-mask">
-                                    <!-- Todo lo blanco es visible -->
-                                    <circle cx="50" cy="50" r="15" fill="#ffffff" />
-                                    <!-- Las líneas negras cortan el círculo -->
-                                    <rect x="30" y="41" width="40" height="3" fill="#000000" />
-                                    <rect x="30" y="49" width="40" height="3" fill="#000000" />
-                                    <rect x="30" y="57" width="40" height="3" fill="#000000" />
-                                </mask>
-                            </defs>
-                            <!-- Símbolo de corchetes girado (L y L opuestas) -->
-                            <g transform="rotate(45 50 50)" fill="currentColor">
-                                <path d="M 36,20 L 80,20 L 80,64 L 68,64 L 68,32 L 36,32 Z" />
-                                <path d="M 20,36 L 20,80 L 64,80 L 64,68 L 32,68 L 32,36 Z" />
-                            </g>
-                            <!-- Globo central con máscara de franjas -->
-                            <circle cx="50" cy="50" r="15" fill="currentColor" mask="url(#footer-globe-mask)" />
+                        <!-- SVG White Icon Logo - Cultura LBZ -->
+                        <svg class="logo-icon" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg" style="height: 42px; width: auto; fill: var(--text-light);">
+                            <!-- Text: Cultura -->
+                            <text x="5" y="32" 
+                                  font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+                                  font-size="32" 
+                                  font-weight="600" 
+                                  font-style="italic" 
+                                  fill="none" 
+                                  stroke="currentColor" 
+                                  stroke-width="2.2"
+                                  letter-spacing="0.5">Cultura</text>
+                            <!-- Text: LBZ -->
+                            <text x="5" y="78" 
+                                  font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+                                  font-size="52" 
+                                  font-weight="900" 
+                                  font-style="italic" 
+                                  fill="none" 
+                                  stroke="var(--accent)" 
+                                  stroke-width="3"
+                                  letter-spacing="1">LBZ</text>
                         </svg>
                         <div class="logo-text">
                             <span class="footer-logo-title">Instituto Leibnitz</span>
