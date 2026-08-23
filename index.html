@@ -1258,15 +1258,29 @@
     <header id="header">
         <div class="nav-container">
             <a href="#" class="logo-box" aria-label="Volver al inicio">
-                <!-- SVG Icon Logo - Hoja Académica & Conectividad -->
-                <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 3L1 9L12 15L21 10.09V17H23V9L12 3Z"/>
-                    <path d="M4.5 12.06V16.34C4.5 18.06 7.86 19.46 12 19.46C16.14 19.46 19.5 18.06 19.5 16.34V12.06L12 16.15L4.5 12.06Z" opacity="0.8"/>
-                    <circle cx="12" cy="9.5" r="1.5" fill="var(--accent)"/>
+                <!-- SVG Icon Logo - Instituto Leibnitz -->
+                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <mask id="header-globe-mask">
+                            <!-- Todo lo blanco es visible -->
+                            <circle cx="50" cy="50" r="15" fill="#ffffff" />
+                            <!-- Las líneas negras cortan el círculo -->
+                            <rect x="30" y="41" width="40" height="3" fill="#000000" />
+                            <rect x="30" y="49" width="40" height="3" fill="#000000" />
+                            <rect x="30" y="57" width="40" height="3" fill="#000000" />
+                        </mask>
+                    </defs>
+                    <!-- Símbolo de corchetes girado (L y L opuestas) -->
+                    <g transform="rotate(45 50 50)" fill="currentColor">
+                        <path d="M 36,20 L 80,20 L 80,64 L 68,64 L 68,32 L 36,32 Z" />
+                        <path d="M 20,36 L 20,80 L 64,80 L 64,68 L 32,68 L 32,36 Z" />
+                    </g>
+                    <!-- Globo central con máscara de franjas -->
+                    <circle cx="50" cy="50" r="15" fill="currentColor" mask="url(#header-globe-mask)" />
                 </svg>
                 <div class="logo-text">
                     <span class="logo-title">Instituto Leibnitz</span>
-                    <span class="logo-subtitle">Villa María</span>
+                    <span class="logo-subtitle">Abriendo caminos</span>
                 </div>
             </a>
             
@@ -1755,14 +1769,28 @@
                 <div class="footer-logo">
                     <div class="logo-box">
                         <!-- SVG White Icon Logo -->
-                        <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill: var(--text-light);">
-                            <path d="M12 3L1 9L12 15L21 10.09V17H23V9L12 3Z"/>
-                            <path d="M4.5 12.06V16.34C4.5 18.06 7.86 19.46 12 19.46C16.14 19.46 19.5 18.06 19.5 16.34V12.06L12 16.15L4.5 12.06Z" opacity="0.8"/>
-                            <circle cx="12" cy="9.5" r="1.5" fill="var(--accent)"/>
+                        <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="fill: var(--text-light);">
+                            <defs>
+                                <mask id="footer-globe-mask">
+                                    <!-- Todo lo blanco es visible -->
+                                    <circle cx="50" cy="50" r="15" fill="#ffffff" />
+                                    <!-- Las líneas negras cortan el círculo -->
+                                    <rect x="30" y="41" width="40" height="3" fill="#000000" />
+                                    <rect x="30" y="49" width="40" height="3" fill="#000000" />
+                                    <rect x="30" y="57" width="40" height="3" fill="#000000" />
+                                </mask>
+                            </defs>
+                            <!-- Símbolo de corchetes girado (L y L opuestas) -->
+                            <g transform="rotate(45 50 50)" fill="currentColor">
+                                <path d="M 36,20 L 80,20 L 80,64 L 68,64 L 68,32 L 36,32 Z" />
+                                <path d="M 20,36 L 20,80 L 64,80 L 64,68 L 32,68 L 32,36 Z" />
+                            </g>
+                            <!-- Globo central con máscara de franjas -->
+                            <circle cx="50" cy="50" r="15" fill="currentColor" mask="url(#footer-globe-mask)" />
                         </svg>
                         <div class="logo-text">
                             <span class="footer-logo-title">Instituto Leibnitz</span>
-                            <span class="footer-logo-sub">Villa María - Nivel Superior</span>
+                            <span class="footer-logo-sub">Abriendo caminos - Nivel Superior</span>
                         </div>
                     </div>
                     <p class="footer-info-text">
