@@ -15,12 +15,12 @@
            ========================================================================== */
         :root {
             /* Colores Institucionales */
-            --primary: #1b365d;         /* Azul Marino Profundo (Institucional) */
-            --primary-dark: #0f213f;    /* Marino Oscuro */
-            --primary-light: #2b4c7e;   /* Marino Suave */
-            --accent: #9e2a2b;          /* Terracota / Vino de Acento */
-            --accent-hover: #802223;    /* Terracota Oscuro */
-            --accent-light: #fdf2f2;    /* Fondo Terracota Suave */
+            --primary: #091124;         /* Azul Marino Profundo (Imagen) */
+            --primary-dark: #040914;    /* Marino Oscuro */
+            --primary-light: #18233c;   /* Marino Suave */
+            --accent: #d96b27;          /* Naranja de Acento (Imagen) */
+            --accent-hover: #bd591e;    /* Naranja Oscuro */
+            --accent-light: #fdf5ef;    /* Fondo Naranja Suave */
             
             /* Tonos de Fondo y Superficies */
             --bg-base: #faf9f6;         /* Crema suave institucional (Lino) */
@@ -35,9 +35,9 @@
             /* Bordes y Sombras */
             --border: #e2e8f0;          /* Borde sutil */
             --border-focus: #cbd5e0;
-            --shadow-sm: 0 2px 4px rgba(27, 54, 93, 0.04);
-            --shadow-md: 0 4px 12px rgba(27, 54, 93, 0.08);
-            --shadow-lg: 0 12px 24px rgba(27, 54, 93, 0.12);
+            --shadow-sm: 0 2px 4px rgba(9, 17, 36, 0.04);
+            --shadow-md: 0 4px 12px rgba(9, 17, 36, 0.08);
+            --shadow-lg: 0 12px 24px rgba(9, 17, 36, 0.12);
             
             /* Fuentes y Transiciones */
             --font-headings: 'Lora', Georgia, serif;
@@ -345,6 +345,41 @@
             display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
+        }
+
+        .hero-content-wrapper {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text-side {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hero-video-side {
+            width: 100%;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         .btn {
@@ -1121,6 +1156,11 @@
                 --header-height: 70px;
             }
 
+            .hero-content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
             .nav-menu {
                 position: fixed;
                 top: var(--header-height);
@@ -1254,21 +1294,30 @@
     <section class="hero" id="inicio">
         <div class="hero-pattern"></div>
         <div class="hero-container">
-            <span class="hero-badge">Programa TransFORMAR@Cba – Ruta 2</span>
-            <div class="hero-meta">Ruta de la Innovación Pedagógica</div>
-            <h1 class="hero-title">Proyecto Institucional de Mejora (PIM)<br><strong>Ciclo Lectivo 2026–2027</strong></h1>
-            
-            <blockquote class="hero-motto">
-                "Tramas de cuidado: habitar la bimodalidad en el Instituto Leibnitz"
-            </blockquote>
-            
-            <p class="hero-description">
-                Estimados y estimadas docentes: les damos la bienvenida a este espacio colaborativo y reflexivo de trabajo. Aquí consolidamos la visión, las estrategias y los compromisos que guiarán la transformación de nuestras prácticas formativas para habitar juntos una bimodalidad plena, cuidada y de calidad.
-            </p>
-            
-            <div class="hero-buttons">
-                <a href="#presentacion" class="btn btn-primary">Conocer la Propuesta</a>
-                <a href="#recursos" class="btn btn-outline">Acceder a Recursos</a>
+            <div class="hero-content-wrapper">
+                <div class="hero-text-side">
+                    <span class="hero-badge">Programa TransFORMAR@Cba – Ruta 2</span>
+                    <div class="hero-meta">Ruta de la Innovación Pedagógica</div>
+                    <h1 class="hero-title">Proyecto Institucional de Mejora (PIM)<br><strong>Ciclo Lectivo 2026–2027</strong></h1>
+                    
+                    <blockquote class="hero-motto">
+                        "Tramas de cuidado: habitar la bimodalidad en el Instituto Leibnitz"
+                    </blockquote>
+                    
+                    <p class="hero-description">
+                        Estimados y estimadas docentes: les damos la bienvenida a este espacio colaborativo y reflexivo de trabajo. Aquí consolidamos la visión, las estrategias y los compromisos que guiarán la transformación de nuestras prácticas formativas para habitar juntos una bimodalidad plena, cuidada y de calidad.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#presentacion" class="btn btn-primary">Conocer la Propuesta</a>
+                        <a href="#recursos" class="btn btn-outline">Acceder a Recursos</a>
+                    </div>
+                </div>
+                <div class="hero-video-side">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/mAdQY7MEguw" title="Video de Presentación del PIM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1656,7 +1705,7 @@
                                 <h3 class="descarga-title">Proyecto Institucional (PIM)</h3>
                                 <p class="descarga-desc">Acceda al documento completo detallado que especifica el marco conceptual, cronogramas y dimensiones evaluativas del PIM 2026-2027.</p>
                             </div>
-                            <a href="https://docs.google.com/document/d/example-pim-leibnitz" target="_blank" rel="noopener noreferrer" class="btn-descarga">
+                            <a href="https://docs.google.com/document/d/1PLKLjxrfF69SNVjM_Ok30SSnfLJkI1zXa_wRvB57PlQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-descarga">
                                 <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
                                 Abrir Documento Completo
                             </a>
@@ -1668,7 +1717,7 @@
                                 <h3 class="descarga-title">Formulario "PIM en Acción"</h3>
                                 <p class="descarga-desc">Cargue aquí las evidencias de sus actividades áulicas y las propuestas de codiseño curricular para la Jornada de Formación Situada.</p>
                             </div>
-                            <a href="https://forms.gle/example-formulario-pim-action" target="_blank" rel="noopener noreferrer" class="btn-descarga">
+                            <a href="https://forms.gle/x4Aw1rnyXPJ26Qzy6" target="_blank" rel="noopener noreferrer" class="btn-descarga">
                                 <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
                                 Completar Formulario
                             </a>
